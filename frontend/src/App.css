@@ -1,0 +1,7 @@
+.App {
+    min-height: 100vh;
+    display: flex;
+    background-image: url('./space.jpg');
+    background-size: cover;
+    background-position: center;
+}
