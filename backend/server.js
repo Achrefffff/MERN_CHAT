@@ -1,9 +1,17 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const { chats } = require("./data/data");
+const { connect } = require("mongoose");
+const connectDB = require("./config/db");
+const colors = require("colors");
+
+
+
+dotenv.config();
+connectDB();
 
 const app = express();
-dotenv.config();
+
 
 app.get("/", (req, res) => {
   res.send("opaa");
@@ -20,4 +28,4 @@ app.get('/api/chat/:id', (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, console.log(`serveur en marche sur le port ${PORT}`));
+app.listen(PORT, console.log(`serveur en marche sur le port ${PORT}`.blue.bold));
