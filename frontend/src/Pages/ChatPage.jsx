@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 
 const ChatPage = () => {
-  const [chats, setChats] = useState([]);
+  /*const [chats, setChats] = useState([]);
   const fetchChats = async () => {
     const { data } = await axios.get("/api/chat");
     console.log(data);
@@ -12,12 +12,13 @@ const ChatPage = () => {
   useEffect(() => {
     fetchChats();
   }, []);
-
+*/
   return (
     <div>
-      {chats.map((chat) => (
+      {/*chats.map((chat) => (
         <div key={chat.chatId}> {chat.chatName} </div>
-      ))}
+      ))*/}
+      <h1 style={{color:'whitesmoke'}}>Chat Page</h1>
     </div>
   );
 };
